@@ -7,7 +7,7 @@ async function main() {
   const NKNguyenToken = await hre.ethers.getContractFactory("NKNguyenToken");
   const token = await NKNguyenToken.deploy();
 
-  await token.waitForDeployment();  // ethers v6: wait for deployment
+  await token.waitForDeployment();
 
   console.log("NKNguyenToken deployed to:", await token.getAddress());
 }

@@ -14,7 +14,7 @@ async function main() {
   console.log(`User1 token balance after buying: ${formatEther(userBalance)}`);
 
   // 2. User1 sells half their tokens back
-  let sellAmount = userBalance / 2n; // ethers v6 BigInt math!
+  let sellAmount = userBalance / 2n; 
   let sellTx = await token.connect(user1).sellTokens(sellAmount);
   await sellTx.wait();
 
